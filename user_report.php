@@ -31,6 +31,7 @@
                             </tr>
                             <?php 
                                 $count = 1;
+                                // while ($row = mysqli_fetch_assoc($query)) {
                                 foreach ($query as $row) {
                              ?>
                             <tr>
@@ -39,7 +40,7 @@
                                 <td><?php echo $row["Phone"]; ?></td>
                                 <td><?php echo $row["Email"]; ?></td>
                                 <td><?php echo $row["Address"]; ?></td>
-                                <td><a href="edit_user.php" class="btn btn-sm btn-Primary">Edit</a></td>
+                                <td><a href="edit_user.php?uid=<?php echo $row["userID"]; ?>" class="btn btn-sm btn-Primary">Edit</a></td>
                                 <td><a href="delete_user.php" class="btn btn-sm btn-danger">Delete</a></td>
                             </tr>
                         <?php } ?>
